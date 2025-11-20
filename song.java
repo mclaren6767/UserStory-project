@@ -11,14 +11,14 @@ public class song {
     private int years;                 // release year
     private String songs;              // song titles
     private String artists;            // artist names
-    private String streams;              // approx stream counts
+    private double streams;              // approx stream counts
     private String grammyWinner;      // has artist won Grammy before?
     private String genres;              // genre of each song
 
     /**
      * Initializes arrays with default values.
      */
-    public song(int years, String songs, String artists, String streams, String grammyWinner, String genres) {
+    public song(int years, String songs, String artists, double streams, String grammyWinner, String genres) {
      this.years = years;
      this.songs = songs;
      this.artists = artists;
@@ -28,7 +28,7 @@ public class song {
     }
 
 
-  
+  // These all return the instance variables
   public int getYears(){
     return years;
   }
@@ -42,7 +42,7 @@ public class song {
   }
   
 
-  public String getStreams(){
+  public double getStreams(){
     return streams;
   }
 
@@ -57,7 +57,7 @@ public class song {
     return genres;
   }
 
-
+// A toString that printsout name, number of streams, grammy winner, and genre
   public String toString(){
     return years + " Name: " + songs + " Artist: " + artists + " Number of Streams: " + streams + " Grammy Winner? " + grammyWinner + " Genre: " + genres;
   }

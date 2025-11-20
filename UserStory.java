@@ -7,7 +7,7 @@ public class UserStory {
   public UserStory (String yearsFile, String songFile, String artistFile, String streamsFile, String grammyWinnerFile, String genreFile){
     this.songList = createSongs(yearsFile, songFile, artistFile, streamsFile, grammyWinnerFile, genreFile);
   }
-
+// Prints out the file using a toString
   public song[] createSongs(String yearsFile, String songFile, String artistFile, String streamsFile, String grammyWinnerFile, String genreFile){
     int[] years = FileReader.toIntArray(yearsFile);
     String[] songs = FileReader.toStringArray(songFile);
@@ -22,9 +22,9 @@ public class UserStory {
     }
     return songArray;
   }
-
+// Finds the max and returns the grammy winner prediciton based off of the max streams
   public double getSongWithMostStream() {
-    // 1. Set a song to be the max
+    
     double max = songList[0].getStreams();
 
     for (song value : songList){
@@ -35,7 +35,7 @@ public class UserStory {
     return max;
   }
 
-
+// User interaction that allows user to access either streams or genres.
   public void seeStatistic(){
     Scanner scanner = new Scanner(System.in);
     System.out.print("Which data column do you want to see?\n\n1) Streams\n2) Genres\n\nChoose a number 1-2: ");
@@ -54,7 +54,7 @@ public class UserStory {
       }
     }
   }
-
+// ToString that returns the song value within the songList.
   public String toString(){
     String result = "";
 
