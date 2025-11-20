@@ -12,7 +12,7 @@ public class UserStory {
     int[] years = FileReader.toIntArray(yearsFile);
     String[] songs = FileReader.toStringArray(songFile);
     String[] artists = FileReader.toStringArray(artistFile);
-    String[] streams = FileReader.toStringArray(streamsFile);
+    double[] streams = FileReader.toDoubleArray(streamsFile);
     String[] grammyWinner = FileReader.toStringArray(grammyWinnerFile);
     String[] genres = FileReader.toStringArray(genreFile);
     song[] songArray = new song[years.length];
@@ -23,20 +23,15 @@ public class UserStory {
     return songArray;
   }
 
-  public song getSongWithMostStream() {
+  public double getSongWithMostStream() {
     // 1. Set a song to be the max
-    song max = songList[0];
-    // 2. Traverse the songList
+    double max = songList[0].getStreams();
 
-    // 3. Get the streams of the current song
-
-    // 4. Compare the streams of the current song to the streams of the max
-
-    // 5. Check the current streams is bigger than the max
-
-    // 6. If true, set the max to be the current song
-
-    // 7. Return the max
+    for (song value : songList){
+      if (value.getStreams()>max){
+        max = value.getStreams();
+      }
+    }
     return max;
   }
 
