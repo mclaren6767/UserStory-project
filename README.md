@@ -1,5 +1,7 @@
 # UserStory-project
 
+This project uses enhaned for loops and uses codes to help find data for a user story. 
+
 # Unit 2 - Data for Social Good Project
 
 ## Introduction
