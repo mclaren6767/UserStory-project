@@ -1,0 +1,10 @@
+Who helped me?:
+Ai
+
+What I asked?:
+Create a data set based off of year, genre, artist, and whether they are a grammy winner or not.
+
+What response I recieved?:
+
+Ai responded a spreadsheet with all of the following columns that gave me a baseline for my project. I then cleaned the data and added another column using my own research based 
+off of the number of times the song was streamed 
