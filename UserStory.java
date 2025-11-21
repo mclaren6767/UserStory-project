@@ -23,16 +23,16 @@ public class UserStory {
     return songArray;
   }
 // Finds the max and returns the grammy winner prediciton based off of the max streams
-  public double getSongWithMostStream() {
+  public song getSongWithMostStream() {
     
-    double max = songList[0].getStreams();
-
+    song max = songList[0];
     for (song value : songList){
-      if (value.getStreams()>max){
-        max = value.getStreams();
+      if (value.getStreams() > max.getStreams()){
+        max=value;
       }
     }
     return max;
+    
   }
 
 // User interaction that allows user to access either streams or genres.
